@@ -1,5 +1,5 @@
 <?php
-include '../../../../config.php';
+include '../../../config.php';
 session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $query = "INSERT INTO tb_course (judul, deskripsi, level, url_video, id_admin) VALUES ('$judul', '$deskripsi', '$level', '$url_video', '$id_admin')";
 
     if (mysqli_query($conn, $query)) {
-        header("Location: admin/FinLaB_Admin/index.php");
+        header("Location: ../../index.php");
     } else {
         echo "Gagal menambahkan kursus: " . mysqli_error($conn);
     }

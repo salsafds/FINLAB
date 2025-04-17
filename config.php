@@ -1,5 +1,5 @@
 <?php
-	$conn = mysqli_connect("","root","","dbfinlab",3308);
+	$conn = mysqli_connect("","root","","dbfinlab");
 
 if(!$conn){
 	echo "Koneksi gagal";
