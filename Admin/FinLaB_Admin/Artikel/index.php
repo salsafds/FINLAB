@@ -1,5 +1,5 @@
 <?php 
-        include_once("config.php");        // Koneksi database
+        include_once("../config.php");        // Koneksi database
         $query = "SELECT * FROM tb_artikel ORDER BY tanggal_dibuat DESC";
         $hasil = mysqli_query($conn, $query);
 ?>

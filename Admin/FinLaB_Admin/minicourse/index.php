@@ -1,5 +1,5 @@
 <?php 
-    include_once("config.php"); // Koneksi database
+    include_once("../config.php"); // Koneksi database
     $query = "SELECT * FROM tb_course";
     $hasil = mysqli_query($conn, $query);
 ?>

@@ -1,5 +1,5 @@
 <?php
-include_once("config.php"); // Koneksi ke database
+include_once("../config.php"); // Koneksi ke database
 
 // Ambil ID artikel dari parameter URL
 $id = $_GET['id'];

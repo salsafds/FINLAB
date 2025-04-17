@@ -1,5 +1,5 @@
 <?php
-include_once("config.php"); // Koneksi database
+include_once("../config.php"); // Koneksi database
 session_start();
 
 

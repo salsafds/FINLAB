@@ -1,5 +1,5 @@
 <?php
-include 'config.php';
+include '../config.php';
 
 $id = $_GET['id'];
 $query = "SELECT * FROM tb_course WHERE id_course = ?";

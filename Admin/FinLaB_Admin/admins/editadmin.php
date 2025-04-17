@@ -1,5 +1,5 @@
 <?php 
-include_once("../../../Database/config.php");
+include_once("../config.php");
 
 // Pastikan parameter ID tersedia
 if (!isset($_GET['id']) || empty($_GET['id'])) {
