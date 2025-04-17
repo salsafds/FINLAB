@@ -102,7 +102,7 @@ $hasil = mysqli_query($conn, $query);
                                 <a href="#contact" class="text-base text-primary py-2 mx-8 flex group-hover:text-accent">Kontak</a>
                             </li>
                             <li class="group">
-                                <a href="login_admin.php" class="text-base font-semibold text-white bg-accent py-2 px-6 rounded-lg hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out">Daftar</a>
+                                <a href="admin/login_admin.php" class="text-base font-semibold text-white bg-accent py-2 px-6 rounded-lg hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out">Daftar</a>
                             </li>
                         </ul>
                     </nav>
