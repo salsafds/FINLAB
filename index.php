@@ -1,7 +1,5 @@
 <?php 
 include_once("config.php"); // Koneksi database
-$query = "SELECT * FROM tb_course ORDER BY id_course DESC LIMIT 3"; // Ambil 3 minicourse terbaru
-$hasil = mysqli_query($conn, $query);
 ?>
 
 <!DOCTYPE html>
@@ -232,6 +230,10 @@ $hasil = mysqli_query($conn, $query);
 
     <!-- Mini Course Start -->
 <section id="minicourse" class="pt-36 pb-32">
+    <?php 
+    $query = "SELECT * FROM tb_course ORDER BY id_course DESC LIMIT 3"; // Ambil 3 minicourse terbaru
+    $hasil = mysqli_query($conn, $query);
+    ?>
     <div class="container">
         <div class="w-full px-4">
             <div class="max-w-xl mx-auto text-center mb-16">
