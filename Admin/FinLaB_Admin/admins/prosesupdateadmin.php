@@ -1,5 +1,5 @@
 <?php
-include_once("../config.php");
+include_once("../../../config.php");
 
 // Pastikan request dilakukan dengan metode POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
