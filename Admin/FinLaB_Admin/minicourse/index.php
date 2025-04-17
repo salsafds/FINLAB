@@ -63,7 +63,7 @@
             </tbody>
         </table>
         <!-- Tombol Kembali ke Dashboard -->
-        <a href="../../index.php" class="btn btn-secondary mb-3">
+        <a href="../index.php" class="btn btn-secondary mb-3">
             <i class="fas fa-arrow-left"></i> Kembali ke Dashboard Admin
         </a>
     </div>
