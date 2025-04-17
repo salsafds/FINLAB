@@ -11,7 +11,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $query = "UPDATE tb_course SET judul='$judul', deskripsi='$deskripsi', level='$level', url_video='$url_video' WHERE id_course=$id_course";
 
     if (mysqli_query($conn, $query)) {
+<<<<<<< HEAD
         header("Location: index.php");
+=======
+        header("Location: ../../../index.php");
+>>>>>>> 41e3296cd96ea046ad2b3e5e1f303c3fab58e77d
     } else {
         echo "Gagal memperbarui kursus: " . mysqli_error($conn);
     }
