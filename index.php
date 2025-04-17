@@ -213,7 +213,7 @@ $hasil = mysqli_query($conn, $query);
             ?>
                 <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
                     <div class="bg-background rounded-xl shadow-lg overflow-hidden mb-10">
-                        <img src="<?php echo htmlspecialchars($row['gambar']); ?>" alt="gambar artikel <?php echo $row['id_artikel']; ?>" class="w-full h-64 object-cover" />
+                        <img src="<?php echo htmlspecialchars($row['cover']); ?>" alt="gambar artikel <?php echo $row['id_artikel']; ?>" class="w-full h-64 object-cover" />
                         <div class="py-8 px-6">
                             <h3>
                                 <a href="detail_artikel.php?id=<?php echo $row['id_artikel']; ?>" class="block mb-3 font-semibold text-xl text-primary hover:text-accent truncate"><?php echo htmlspecialchars($row['judul']); ?></a>
@@ -265,7 +265,7 @@ $hasil = mysqli_query($conn, $query);
                             <h2>
                                 <a href="main/minicourse.php?id=<?php echo $row['id_course']; ?>" class="text-xl font-semibold text-secondary hover:text-accent truncate"><?php echo htmlspecialchars($row['judul']); ?></a>
                             </h2>
-                            <p class="text-sm text-secondary my-1 truncate-3-lines"><?php echo htmlspecialchars($row['deskripsi']); ?></p>
+                            <p class="text-sm text-secondary truncate-3-lines"><?php echo htmlspecialchars($row['deskripsi']); ?></p>
                             <span class="text-sm font-semibold text-accent">#<?php echo htmlspecialchars($row['level']); ?></span>
                         </div>
                     </div>
