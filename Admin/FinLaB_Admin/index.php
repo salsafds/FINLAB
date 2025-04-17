@@ -64,7 +64,7 @@
     <?php endif; ?></h2>
     <p>Gunakan menu navigasi untuk mengelola data.</p>
 
-    <a href="artikel/index.php" class="btn btn-custom mt-3">
+    <a href="Artikel/index.php" class="btn btn-custom mt-3">
         <i class="fas fa-newspaper"></i> Kelola Artikel Keuangan
     </a>
 
