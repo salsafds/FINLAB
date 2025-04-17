@@ -1,5 +1,5 @@
 <?php 
-include_once("../Database/config.php"); // Koneksi database
+include_once("../config.php"); // Koneksi database
 
 if (isset($_GET['id'])) {
     $id_artikel = intval($_GET['id']);
@@ -75,15 +75,6 @@ if (isset($_GET['id'])) {
                 <div class="px-4">
                     <a href="index.php" class="font-bold text-xl text-accent block py-6">FINLAB</a>
                 </div>
-                <nav class="hidden lg:flex">
-                    <ul class="flex space-x-4">
-                        <li><a href="#home" class="text-primary hover:text-accent">Beranda</a></li>
-                        <li><a href="#about" class="text-primary hover:text-accent">Tentang FINLAB</a></li>
-                        <li><a href="#artikel" class="text-primary hover:text-accent">Artikel</a></li>
-                        <li><a href="#minicourse" class="text-primary hover:text-accent">Kursus Mini</a></li>
-                        <li><a href="#contact" class="text-primary hover:text-accent">Kontak</a></li>
-                    </ul>
-                </nav>
             </div>
         </div>
     </header>
@@ -96,7 +87,7 @@ if (isset($_GET['id'])) {
             <h1 class="text-3xl font-bold mb-2"><?php echo htmlspecialchars($artikel['judul']); ?></h1>
             <h2 class="text-md text-gray-600 mb-4">Oleh: <?php echo htmlspecialchars($artikel['penulis']); ?></h2>
             <p class="text-gray-700 mb-4"><?php echo nl2br(htmlspecialchars($artikel['konten'])); ?></p>
-            <a href="index.php" class="text-white bg-accent py-2 px-4 rounded-lg hover:opacity-80">Kembali ke Beranda</a>
+            <a href="../index.php" class="text-white bg-accent py-2 px-4 rounded-lg hover:opacity-80">Kembali ke Beranda</a>
         </div>
     </div>
 </div>

@@ -1,6 +1,4 @@
-<?php
-include "../../config.php"; // Koneksi ke database
-?>
+
 <?php 
     session_start();
     include_once("../../config.php");        // Koneksi database
@@ -78,7 +76,7 @@ include "../../config.php"; // Koneksi ke database
         <i class="fas fa-user-cog"></i> Kelola Akun Admin
     </a>
 
-    <p><a href="../FinLaB_Login/logout.php" class="btn btn-danger mt-3">Logout</a></p>
+    <p><a href="../logout_admin.php" class="btn btn-danger mt-3">Logout</a></p>
 </div>
 
 <div class="container dashboard-container">

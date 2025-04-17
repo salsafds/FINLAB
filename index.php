@@ -1,5 +1,13 @@
 <?php 
 include_once("config.php"); // Koneksi database
+
+// Query untuk mengambil data minicourse
+$query_minicourse = "SELECT * FROM tb_course ORDER BY id_course DESC LIMIT 3"; 
+$hasil_minicourse = mysqli_query($conn, $query_minicourse);
+
+// Query untuk mengambil data artikel
+$query_artikel = "SELECT * FROM tb_artikel ORDER BY id_artikel DESC LIMIT 3"; 
+$hasil_artikel = mysqli_query($conn, $query_artikel);
 ?>
 
 <!DOCTYPE html>
@@ -100,7 +108,7 @@ include_once("config.php"); // Koneksi database
                                 <a href="#contact" class="text-base text-primary py-2 mx-8 flex group-hover:text-accent">Kontak</a>
                             </li>
                             <li class="group">
-                                <a href="admin/login_admin.php" class="text-base font-semibold text-white bg-accent py-2 px-6 rounded-lg hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out">Daftar</a>
+                                <a href="page_akun.php" class="text-base font-semibold text-white bg-accent py-2 px-6 rounded-lg hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out">Daftar</a>
                             </li>
                         </ul>
                     </nav>
@@ -204,17 +212,14 @@ include_once("config.php"); // Koneksi database
 
         <div class="flex flex-wrap justify-center">
             <?php 
-            // Ambil data artikel dari database
-            $query = "SELECT * FROM tb_artikel ORDER BY id_artikel DESC LIMIT 3"; // Ambil 3 artikel terbaru
-            $hasil = mysqli_query($conn, $query);
-            while ($row = mysqli_fetch_assoc($hasil)) { 
+            while ($row = mysqli_fetch_assoc($hasil_artikel)) { 
             ?>
                 <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
                     <div class="bg-background rounded-xl shadow-lg overflow-hidden mb-10">
-                        <img src="<?php echo htmlspecialchars($row['cover']); ?>" alt="gambar artikel <?php echo $row['id_artikel']; ?>" class="w-full h-64 object-cover" />
+                        <img src="main/get_image.php?id=<?php echo $row['id_artikel']; ?>" alt="gambar artikel <?php echo $row['id_artikel']; ?>" class="w-full h-64 object-cover" />
                         <div class="py-8 px-6">
                             <h3>
-                                <a href="detail_artikel.php?id=<?php echo $row['id_artikel']; ?>" class="block mb-3 font-semibold text-xl text-primary hover:text-accent truncate"><?php echo htmlspecialchars($row['judul']); ?></a>
+                                <a href="main/artikel.php?id=<?php echo $row['id_artikel']; ?>" class="block mb-3 font-semibold text-xl text-primary hover:text-accent truncate"><?php echo htmlspecialchars($row['judul']); ?></a>
                             </h3>
                             <h2 class="mb-1 font-medium text-md text-secondary"><?php echo htmlspecialchars($row['penulis']); ?></h2>         
                             <p class="font-medium text-base text-gray-400 truncate-3-lines mb-6"><?php echo htmlspecialchars($row['konten']); ?></p>
@@ -230,10 +235,7 @@ include_once("config.php"); // Koneksi database
 
     <!-- Mini Course Start -->
 <section id="minicourse" class="pt-36 pb-32">
-    <?php 
-    $query = "SELECT * FROM tb_course ORDER BY id_course DESC LIMIT 3"; // Ambil 3 minicourse terbaru
-    $hasil = mysqli_query($conn, $query);
-    ?>
+    
     <div class="container">
         <div class="w-full px-4">
             <div class="max-w-xl mx-auto text-center mb-16">
@@ -245,7 +247,7 @@ include_once("config.php"); // Koneksi database
 
         <div class="flex flex-wrap justify-center">
             <div class="grid md:grid-cols-3 gap-6">
-                <?php while ($row = mysqli_fetch_assoc($hasil)) { 
+                <?php while ($row = mysqli_fetch_assoc($hasil_minicourse)) { 
                     // Ambil ID video dari URL
                     $videoId = null;
                     if (strpos($row['url_video'], 'embed/') !== false) {

@@ -1,5 +1,5 @@
 <?php
-include_once("../config.php");
+include_once("../../../config.php");
 
 // Pastikan ID dikirim
 if (!isset($_POST['id']) || empty($_POST['id'])) {

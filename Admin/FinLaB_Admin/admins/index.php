@@ -1,5 +1,5 @@
 <?php 
-    include_once("../config.php"); // Koneksi database
+    include_once("../../../config.php"); // Koneksi database
     $query = "SELECT * FROM admin ORDER BY tgl_daftar DESC";
     $hasil = mysqli_query($conn, $query);
 ?>

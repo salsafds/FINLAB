@@ -1,5 +1,5 @@
 <?php
-include_once("../Database/config.php"); // Koneksi database
+include_once("../config.php"); // Koneksi database
 
 if (isset($_GET['id'])) {
     $id_artikel = intval($_GET['id']);

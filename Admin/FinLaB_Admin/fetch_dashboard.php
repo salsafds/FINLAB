@@ -1,5 +1,5 @@
 <?php
-include "../config.php"; // Koneksi ke database
+include "../../config.php"; // Koneksi ke database
 
 // Hitung jumlah pengguna (Gantilah 'users' dengan tabel pengguna jika ada)
 $query_users = mysqli_query($conn, "SELECT COUNT(*) as total FROM admin");
