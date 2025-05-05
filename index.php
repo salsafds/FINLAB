@@ -148,7 +148,7 @@ $hasil_artikel = mysqli_query($conn, $query_artikel);
                 </div>
                 <div class="w-full self-end px-4 lg:w-1/2">
                     <div class="relative mt-10 lg:mt-9 lg:right-0">
-                        <img src="dist/img/modelhomepage.png" alt="Foto Model Home Page" class="max-w-full mx-auto" />
+                        <img src="Assets/img/modelhomepage.png" alt="Foto Model Home Page" class="max-w-full mx-auto" />
                         <span class="absolute bottom-0 -z-10 left-1/2 -translate-x-1/2 md:scale-125">
                             <svg width="270" height="270" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                                 <path fill="#FFD700" d="M53.4,-36.2C66.5,-26.1,72.5,-4.1,67.5,14.5C62.5,33.1,46.5,48.2,28.5,55.4C10.5,62.6,-9.5,61.9,-30.2,54.9C-50.9,47.9,-72.3,34.7,-78.5,15.6C-84.6,-3.4,-75.6,-28.2,-60,-38.9C-44.3,-49.5,-22.2,-45.9,-1,-45.1C20.1,-44.3,40.3,-46.2,53.4,-36.2Z" transform="translate(100 100)" />

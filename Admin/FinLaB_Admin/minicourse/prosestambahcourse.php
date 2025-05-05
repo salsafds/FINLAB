@@ -12,11 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $query = "INSERT INTO tb_course (judul, deskripsi, level, url_video, id_admin) VALUES ('$judul', '$deskripsi', '$level', '$url_video', '$id_admin')";
 
     if (mysqli_query($conn, $query)) {
-<<<<<<< HEAD
-        header("Location: index.php");
-=======
         header("Location: ../../index.php");
->>>>>>> 41e3296cd96ea046ad2b3e5e1f303c3fab58e77d
     } else {
         echo "Gagal menambahkan kursus: " . mysqli_error($conn);
     }
